@@ -115,7 +115,7 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
+######### here we go git #########
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -138,7 +138,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+########## git is so powerful tool ###########
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -167,20 +167,23 @@ def user_stats(df):
     
     # Display counts of gender
     try: 
+        # define gender 
         gender_type = df['Gender'].value_counts()
         print(f"\n The type of users by gender are {gender_type}")
         
     except:
+        # if no gender print this message 
         print("\n This file has no gender type in it")    
 
     # Display earliest, most recent, and most common year of birth
     try:
+        #print earliest birth year
         earliest = int(df['Birth year'].min())
         print(f"\nThe earliest year of birth: {earliest}")
-        
+        # print max birth year 
         recent = int(df['Birth year'].max())
         print(f"\n The recent year of birth:{recent}")
-        
+        #print the most common birth year
         common = int(df['Birth year'].mode()[0])
         print(f"\n The common year of birth:{common}")
     
@@ -189,7 +192,7 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
+####### Adding New Feature in diplay_raw_data #########
 def display_raw_data(df):
          
     view_data = input("\n Would you like to view 5 rows of individual trip data? Enter yes or no\n ").lower()
@@ -203,7 +206,7 @@ def display_raw_data(df):
             print(df.iloc[start_loc:start_loc + 5])
         elif view_display != 'yes':
             break
-
+######## New feature added ###########
 def main():
     while True:
         city, month, day = get_filters()
